@@ -1,0 +1,38 @@
+<!--pages/collection/collection.wxml-->
+<view class='page'>
+  <view class='page_bd'>
+    <view wx:if="{{collectionAry.length === 0}}" class='add-address'>
+      <view>
+        <image src='../../icon/iconNothing1.png'></image>
+      </view>
+      <view>
+        <text class='no-collection'>什么都没有</text>
+      </view>
+      <view bindtap='goToList'>
+        <text class='go-to-add-adderss'>马上去选几件中意的商品</text>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='categroy-right'>
+        <view class='businessBox' wx:for="{{collectionAry}}" wx:key='id'>
+          <view class='business-pic business-pic-list'>
+            <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+              <image src='{{item.imgUrl}}'></image>
+            </navigator>
+          </view>
+          <view class='business-desc business-desc-list'>
+            <view>
+              <text>{{item.name}}</text>
+            </view>
+            <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+            <view class='business-price'>
+              <text>￥</text>{{item.price}}</view>
+            <view>
+              <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

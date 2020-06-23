@@ -1,0 +1,161 @@
+<!--pages/list/list.wxml-->
+<view class='business-list'>
+  <view class='categroy-left'>
+    <view class="cate-list {{curIndex === index?'on':''}}" wx:for="{{categroy}}" wx:key="item.id" data-index='{{index}}' data-id='{{item.id}}' bindtap='switchTab'>{{item.name}}
+    </view>
+  </view>
+  <view wx:if="{{curIndex==0}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{tong}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{curIndex==1}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{wen}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{curIndex==2}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{she}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{curIndex==3}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{li}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{curIndex==4}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{sheng}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{curIndex==5}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{ke}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{curIndex==6}}">
+    <view class='categroy-right'>
+      <view class='businessBox' wx:for="{{jiao}}" wx:key='id'>
+        <view class='business-pic business-pic-list'>
+          <navigator class='detail-navigator' url='../details/details?id={{item._id}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'>
+            <text>￥</text>{{item.price}}</view>
+          <view>
+            <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart' data-id="{{item}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view>
+  <view class='searchBar' style="  margin: 10px 0px;">
+    <view class='searchBarInputC flex alignC'>
+      <view class='searchBarInput'>
+        <input type='text' class='searchBarInput_in' bindinput='sear' placeholder="搜索您想买的书" value='{{searchVal}}' confirm-type='search' focus="{{autoFocus}}"></input>
+      </view>
+      <view class='searchClose' bindtap='goCancel'>搜索</view>
+    </view>
+  </view>
+  <view class='recommond-text'>
+    <text>相关书籍</text>
+  </view>
+  <view class='businessBox' wx:for="{{businessData}}" wx:key='id'>
+    <navigator url='../details/details?id={{item._id}}'>
+      <view class='business-pic'>
+        <image src='{{item.imgUrl}}'></image>
+      </view>
+      <view class='business-desc'>
+        <view>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+        <view class='business-price'>
+          <text>￥</text>{{item.price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

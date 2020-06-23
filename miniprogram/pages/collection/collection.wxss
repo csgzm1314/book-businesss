@@ -1,0 +1,47 @@
+/* pages/collection/collection.wxss */
+.add-address {
+  width: 400rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 32rpx;
+}
+.add-address image {
+  width: 300rpx;
+  height: 108rpx;
+}
+.no-collection {
+  color: #ccc;
+}
+.go-to-add-adderss {
+  color: red;
+}
+.categroy-right {
+  height: 100%;
+  width: 100%;
+  float: left;
+  overflow-y: scroll;
+}
+.detail-navigator {
+  height: 100%;
+  width: 100%;
+}
+.business-pic-list {
+  height: 180rpx;
+  width: 180rpx;
+}
+.business-desc-list {
+  width: 500rpx;
+  height: 180rpx;
+  right: 20rpx;
+}
+.business-price {
+  font-size: 32rpx;
+}
+.add-to-cart {
+  width: 64rpx;
+  height: 64rpx;
+}
